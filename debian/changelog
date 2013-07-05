@@ -1,0 +1,36 @@
+python-flickrapi (2.0-beta0) unstable; urgency=low
+
+  * Updated to latest hg sources
+
+ -- Dariusz Gadomski <dgadomski@gmail.com>  Fri, 05 Jul 2013 19:03:22 +0200
+
+python-flickrapi (1.2-3) unstable; urgency=low
+
+  * Improved package long description (closes: #531014)
+
+ -- Thomas Schmidt <tschmidt@debian.org>  Fri, 29 May 2009 10:51:34 +0200
+
+python-flickrapi (1.2-2) unstable; urgency=low
+
+  * First upload to debian (closes: #528612)
+  * Updated debian/copyright
+  * Bumped Standards-Version to 3.8.1
+  * Changed Upstream homepage in debian/control
+  * Added Vcs-Git and Vcs-Browser fields to debian/control
+  * Updated package short description
+  * Fixed debian/watch
+
+ -- Thomas Schmidt <tschmidt@debian.org>  Thu, 14 May 2009 09:20:22 +0200
+
+python-flickrapi (1.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Thomas Schmidt <tschmidt@debian.org>  Sat, 13 Dec 2008 10:54:39 +0100
+
+python-flickrapi (1.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Thomas Schmidt <tschmidt@debian.org>  Fri, 25 Jul 2008 13:55:06 +0200
+

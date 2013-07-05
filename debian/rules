@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+PYVERS=$(shell pyversions -r)
+d=debian/python-flickrapi
+
+build: 
+
+clean:
+	dh_testdir
+	for python in $(PYVERS); do  \
+	    $$python setup.py clean; \
+	done
+	rm -f `find $(CURDIR) -name '*.pyc'`
+	rm -rf build-stamp build
+	rm -rf $(d)
+	dh_clean install-stamp
+
+install: build install-stamp
+install-stamp:
+	dh_testdir
+	dh_testroot
+	dh_installdirs
+	set -e; \
+	for python in $(PYVERS); do \
+	    $$python setup.py install --root=$(d);\
+	done
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs 
+	dh_installchangelogs
+	dh_compress -X.py
+	dh_fixperms
+	dh_pysupport
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch:
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install
