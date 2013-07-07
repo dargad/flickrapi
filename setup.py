@@ -18,25 +18,22 @@ import sys
 if (major, minor) < (2, 6):
     raise SystemExit("Sorry, Python 2.6 or newer required")
 
-import distribute_setup
-distribute_setup.use_setuptools()
-
 from setuptools import setup
 
 data = {
-    'name': 'flickrapi', 
-    'version': __version__, 
+    'name': 'flickrapi',
+    'version': __version__,
     'author': 'Sybren A. Stuvel',
-    'author_email': 'sybren@stuvel.eu', 
+    'author_email': 'sybren@stuvel.eu',
     'maintainer': 'Sybren A. Stuvel',
     'maintainer_email': 'sybren@stuvel.eu',
     'url': 'http://stuvel.eu/projects/flickrapi',
-    'description': 'The official Python interface to the Flickr API', 
+    'description': 'The official Python interface to the Flickr API',
     'long_description': 'The easiest to use, most complete, and '
         'most actively developed Python interface to the Flickr API.'
         'It includes support for authorized and non-authorized '
         'access, uploading and replacing photos, and all Flickr API '
-        'functions.', 
+        'functions.',
     'packages': ['flickrapi'],
     'data_files': ['LICENSE', 'README', 'UPGRADING'],
     'license': 'Python',
